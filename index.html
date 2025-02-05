@@ -5,214 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-}
-
-/* Header styles */
-.header {
-    background-color: #fff;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.nav-link:hover {
-    color: #007bff;
-}
-
-/* Hero section */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #666;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Projects section */
-.projects {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 1.5rem;
-}
-
-.project-title {
-    margin-bottom: 0.5rem;
-}
-
-.project-description {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-/* About section */
-.about {
-    padding: 5rem 2rem;
-    background-color: #fff;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Contact section */
-.contact {
-    padding: 5rem 2rem;
-    text-align: center;
-    background-color: #f8f9fa;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.social-link {
-    color: #333;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.social-link:hover {
-    color: #007bff;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-}
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <a href="#" class="nav-logo">Your Name</a>
+            <a href="#" class="nav-logo">Stephen Ralis</a>
             <div class="nav-links">
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#about" class="nav-link">About</a>
@@ -267,15 +65,17 @@ body {
         <h2 class="section-title">Get In Touch</h2>
         <p>Feel free to reach out to me for collaborations or opportunities!</p>
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/rightclicktoaim" class="social-link"><i class="fab fa-github"></i></a>
             <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:ralissa25@vmi.edu" class="social-link"><i class="fas fa-envelope"></i></a>
         </div>
+        <br />
+        <p>Made with <a href="https://claude.ai">Claude</a></p>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Stephen Ralis. All rights reserved.</p>
     </footer>
 
     <script>
