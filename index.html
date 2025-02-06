@@ -41,21 +41,22 @@
   </nav>
 
   <main>
-    <!-- SECTION 1: Hero -->
+
     <section class="hero-section">
       <div class="text">
-        <h2>Hi, I'm John 👋</h2>
+        <h2>Hi, I'm Stephen 👋</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto, provident aperiam. Iste, repellat aperiam!</p>
 
         <div class="links">
+
+          <a href="#biography">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>Biography</span>
+          </a>
+
           <a href="#skills">
             <i class="fa-solid fa-code"></i>
             <span>Skills</span>
-          </a>
-          
-          <a href="#testimony">
-            <i class="fa-solid fa-pen"></i>
-            <span>Testimony</span>
           </a>
           
           <a href="#contact">
@@ -70,55 +71,49 @@
       </div>
     </section>
 
-    <!-- SECTION 2: Skills -->
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?
-      </div>
+    <section id="biography" class="bio-section">
+      <h2>Biography</h2>
 
-      <div class="cells">
-        <div class="cell">
-          <img src="images/html-logo.webp" alt="html logo">
-          <span>HTML</span>
+      <div class="group">
+        <div class="person-details">
+          <img src="img/VMI-Spider.svg">
+          <p>Virginia Military Institute</p>
+          <p>Computer and Information Science B.S.</p>
         </div>
-        
-        <div class="cell">
-          <img src="images/css-logo.webp" alt="css logo">
-          <span>CSS</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/javascript-logo.webp" alt="javascript logo">
-          <span>JavaScript</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/node-logo.webp" alt="node logo">
-          <span>Node.js</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/react-logo.webp" alt="react logo">
-          <span>React.js</span>
+
+        <div class="text">
+          I am am currently studying Computer and Information Scienece at the Virginia Military Insitiute in Lexington, Virginia. Upon graduating in May of 2025 I will have obtained a four year degree and commissioned as a Second Lietenant in the Uintied States Army.
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: Testimony -->
-    <section id="testimony" class="testimony-section">
-      <h2>Testimony</h2>
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+        I am proficient in the development of web-based applications. I have experience in mainly front-end and simple server-side scpriting.
+      </div>
 
-      <div class="group">
-        <div class="person-details">
-          <img src="images/testimony-headshot.webp">
-          <p>John Doe</p>
-          <p>Lorem ipsum dolor sit.</p>
+      <div class="cells">
+        <div class="cell">
+          <img src="/img/html-logo.webp" alt="html logo">
+          <span>HTML</span>
         </div>
-
-        <div class="text">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque quaerat nostrum laborum? Rem adipisci natus eos nemo reprehenderit, cumque nostrum enim commodi. Eum, enim vero eveniet doloremque sed veniam. Doloremque explicabo non reprehenderit expedita! Accusamus mollitia repellendus dolorum officiis libero quod deleniti cum."
+        
+        <div class="cell">
+          <img src="/img/css-logo.webp" alt="css logo">
+          <span>CSS</span>
         </div>
+        
+        <div class="cell">
+          <img src="/img/javascript-logo.webp" alt="javascript logo">
+          <span>JavaScript</span>
+        </div>
+        
+        <div class="cell">
+          <img src="/img/php-logo.webp" alt="php logo">
+          <span>PHP</span>
+        </div>
+        
       </div>
     </section>
 
@@ -131,17 +126,17 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugit maiores atque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae, iusto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis.
         </div>
 
-        <form>
+        <form action="mailto:ralissa25@vmi.edu" method="get" enctype="text/plain">
           <label for="name">Name</label>
-          <input type="text" id="name">
+          <input type="text" id="name" name="subject">
 
-          <label for="email">Email</label>
+          <label name="email" for="email">Email</label>
           <input type="email" id="email">
 
           <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
+          <textarea id="message" name="body" cols="30" rows="10"></textarea>
 
-          <button type="submit">Send Message</button>
+          <button type="submit">Send Message <i class="fas fa-envelope"></i></button>
         </form>
       </div>
     </section>

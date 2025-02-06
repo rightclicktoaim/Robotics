@@ -155,28 +155,28 @@
   }
   
   /* SECTION 3: Testimony */
-  .testimony-section {
+  .bio-section {
     padding: 0 50px;
     margin-bottom: 100px;
   }
   
-  .testimony-section h2 {
+  .bio-section h2 {
     font-size: 35px;
     margin-bottom: 30px;
   }
   
-  .testimony-section .group {
+  .bio-section .group {
     display: flex;
     align-items: center;
     gap: 50px;
   }
   
-  .testimony-section .group .person-details {
+  .bio-section .group .person-details {
     text-align: center;
     flex: 2;
   }
   
-  .testimony-section .group .person-details img {
+  .bio-section .group .person-details img {
     width: 200px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -184,15 +184,15 @@
     margin-bottom: 10px;
   }
   
-  .testimony-section .group .person-details p {
+  .bio-section .group .person-details p {
     font-weight: 600;
   }
   
-  .testimony-section .group .person-details p:last-child {
+  .bio-section .group .person-details p:last-child {
     font-weight: normal;
   }
   
-  .testimony-section .group .text {
+  .bio-section .group .text {
     flex: 8;
   }
   
@@ -319,7 +319,7 @@
     }
   
     /* SECTION 3: Testimony */
-    .testimony-section {
+    .bio-section {
       padding: 0 20px;
     }
   
