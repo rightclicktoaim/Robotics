@@ -59,7 +59,6 @@
     margin-left: 5px;
   }
   
-  /* SECTION 1: Hero */
   .hero-section {
     display: flex;
     justify-content: space-between;
@@ -108,7 +107,6 @@
     border-radius: 50%;
   }
   
-  /* SECTION 2: Skills */
   .skills-section {
     padding: 0 50px;
     margin-bottom: 100px;
@@ -154,7 +152,6 @@
     font-size: 18px;
   }
   
-  /* SECTION 3: Testimony */
   .bio-section {
     padding: 0 50px;
     margin-bottom: 100px;
@@ -195,8 +192,11 @@
   .bio-section .group .text {
     flex: 8;
   }
+
+  .bio-section .group .text ul{
+    padding-left: 30px;
+  }
   
-  /* SECTION 4: Contact */
   .contact-section {
     padding: 0 50px;
     margin-bottom: 100px;
