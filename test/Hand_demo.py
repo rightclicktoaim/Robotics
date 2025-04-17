@@ -17,6 +17,8 @@ def draw_landmarks_on_image(rgb_image, detection_result):
   hand_landmarks_list = detection_result.hand_landmarks
   handedness_list = detection_result.handedness
   annotated_image = np.copy(rgb_image)
+  right_fingers_count = 0
+  left_fingers_count = 0
 
   # Loop through the detected hands to visualize.
   for idx in range(len(hand_landmarks_list)):
@@ -25,9 +27,7 @@ def draw_landmarks_on_image(rgb_image, detection_result):
 
     # Draw the hand landmarks.
     hand_landmarks_proto = landmark_pb2.NormalizedLandmarkList()
-    hand_landmarks_proto.landmark.extend([
-      landmark_pb2.NormalizedLandmark(x=landmark.x, y=landmark.y, z=landmark.z) for landmark in hand_landmarks
-    ])
+    hand_landmarks_proto.landmark.extend([landmark_pb2.NormalizedLandmark(x=landmark.x, y=landmark.y, z=landmark.z) for landmark in hand_landmarks])
     solutions.drawing_utils.draw_landmarks(
       annotated_image,
       hand_landmarks_proto,
@@ -42,8 +42,39 @@ def draw_landmarks_on_image(rgb_image, detection_result):
     text_x = int(min(x_coordinates) * width)
     text_y = int(min(y_coordinates) * height) - MARGIN
 
-    # Draw handedness (left or right hand) on the image.
-    cv2.putText(annotated_image, f"{handedness[0].category_name}",
+    # Determine how many fingers are up for left hand
+    if handedness[0].category_name == "Left":
+      if x_coordinates[4] < x_coordinates[3]:
+        left_fingers_count += 1
+      if y_coordinates[8] < y_coordinates[6]:
+        left_fingers_count += 1
+      if y_coordinates[12] < y_coordinates[10]:
+        left_fingers_count += 1
+      if y_coordinates[16] < y_coordinates[14]:
+        left_fingers_count += 1
+      if y_coordinates[20] < y_coordinates[18]:
+        left_fingers_count += 1
+
+      # Draw caption (left handedness and finger count)
+      cv2.putText(annotated_image, f"{left_fingers_count} Left Fingers",
+                (text_x, text_y), cv2.FONT_HERSHEY_DUPLEX,
+                FONT_SIZE, HANDEDNESS_TEXT_COLOR, FONT_THICKNESS, cv2.LINE_AA)
+
+    # Determine how many fingers are up for right hand
+    if handedness[0].category_name == "Right":
+      if x_coordinates[4] > x_coordinates[3]:
+        right_fingers_count += 1
+      if y_coordinates[8] < y_coordinates[6]:
+        right_fingers_count += 1
+      if y_coordinates[12] < y_coordinates[10]:
+        right_fingers_count += 1
+      if y_coordinates[16] < y_coordinates[14]:
+        right_fingers_count += 1
+      if y_coordinates[20] < y_coordinates[18]:
+        right_fingers_count += 1
+
+      # Draw caption (right handedness and finger count)
+      cv2.putText(annotated_image, f"{right_fingers_count} Right Fingers",
                 (text_x, text_y), cv2.FONT_HERSHEY_DUPLEX,
                 FONT_SIZE, HANDEDNESS_TEXT_COLOR, FONT_THICKNESS, cv2.LINE_AA)
 
